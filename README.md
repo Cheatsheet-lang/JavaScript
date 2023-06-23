@@ -153,4 +153,165 @@ console.log(slice); // prints [3, 4, 5, 6, 7] to the console
 console.log(arr); // prints [1, 2, 8, 9]
 ```
 
+## Conditions
+
+Conditions are used to check whether a condition is true or false, and based on that we can perform some operations.
+
+**If-Else**
+```javascript
+const a = 10;
+
+if (a == 10) {
+    console.log("Value is 10");
+} else {
+    console.log("Value is not 10");
+}
+```
+
+The general syntax for the if-else condition looks like above. The else part is optional, if you don't want to use it, then you can just use the if part.
+
+Compared to other programming languages, JS has a lot of operators, which can be used to check the conditions.
+
+**Comparison Operators**
+```javascript
+const a = 10;
+const b = "10";
+
+console.log(a == b); // prints true to the console
+console.log(a === b); // prints false to the console
+```
+
+The difference between `==` and `===` is that, `==` checks only the value of the variable, whereas `===` checks the value and the datatype of the variable.
+
+The negation of the above is `!=` and `!==`.
+
+**Inequality Operators**
+```javascript
+const a = 10;
+const b = 20;
+
+console.log(a > b); // prints false to the console
+console.log(a < b); // prints true to the console
+console.log(a >= b); // prints false to the console
+console.log(a <= b); // prints true to the console
+```
+
+The above operators are used to check the relation between two variables.
+
+**Logical Operators**
+```javascript
+const a = 10;
+const b = 20;
+const c = 30;
+
+console.log(a < b && b < c); // prints true to the console AND operator
+console.log(a < b || b > c); // prints true to the console OR operator
+console.log(!(a < b)); // prints false to the console NOT operator
+```
+
+**Switch Case**
+```javascript
+var a = 1;
+
+switch (a) {
+    case 1:
+        console.log("Value is 1");
+        break;
+    case 2:
+        console.log("Value is 2");
+        break;
+    default:
+        console.log("Value is not 1 or 2");
+        break;
+}
+```
+
+## Loops
+
+Loops are used to perform a set of operations multiple times. There are three types of loops in JS. The syntax of loops is similar to other compile time programming languages.
+
+**For Loop**
+```javascript
+for (var i = 0; i < 10; i++) {
+    console.log(i);
+}
+
+// prints 0 to 9 to the console
+```
+
+**While Loop**
+```javascript
+var i = 0;
+
+while (i < 10) {
+    console.log(i);
+    i++;
+}
+
+// prints 0 to 9 to the console
+```
+
+**Do-While Loop**
+```javascript
+var i = 0;
+
+do {
+    console.log(i);
+    i++;
+} while (i < 10);
+
+// prints 0 to 9 to the console
+```
+
+## Functions
+
+The syntax of functions is given below, the function name should be in camelCase and this is a named function.
+
+```javascript
+function functionName(param1, param2, ...) {
+    // function body
+    return value;
+}
+```
+
+There is also one more type of function, which is an anonymous function. This function is assigned to a variable and the variable name is used to call the function.
+
+```javascript
+var functionName = function(param1, param2, ...) {
+    // function body
+    return value;
+}
+```
+
+## Prompts
+There are three types of prompts in JS, which are `alert`, `confirm` and `prompt`.
+
+**Alert**
+Just displays a message to the user. It doesn't return any value to the user.
+
+```javascript
+alert("Hello World");
+```
+
+**Confirm**
+Displays a message to the user and returns a boolean value to the user. If the user clicks on the `OK` button, then it returns `true` to the user, else it returns `false`.
+
+```javascript
+var result = confirm("Are you sure?");
+
+if (result) {
+    console.log("User clicked on OK");
+} else {
+    console.log("User clicked on Cancel");
+}
+```
+
+**Prompt**
+Displays a message to the user and also takes input from the user. It returns the input value to the user.
+
+```javascript
+var name = prompt("Enter your name");
+
+console.log(name);
+```
 
