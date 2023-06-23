@@ -22,3 +22,25 @@ const string = "Hello World"; // String variable
 const float = 10.5; // Float variable
 const boolean = true; // Boolean variable
 ```
+
+There are also two more advanced datatypes in JS, which are `Array` and `Object`.
+
+```javascript
+const arr = [1, 2, 3, 4, 5]; // Array variable
+const obj = { name: "John", age: 20 }; // Object variable (similar to dict in python)
+```
+
+Another two value types in JS are `null` and `undefined`.
+
+`undefined` is a type, when a variable is used but not defined.
+`null` is a type, when a variable is defined but has no value.
+
+```javascript
+const nd_var;
+console.log(nd_var); // prints undefined to the console
+```
+
+```javascript
+const null_var = null;
+console.log(null_var); // prints null to the console
+```
