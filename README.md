@@ -1,8 +1,20 @@
 # JavaScript
 
+JavaScript is a high-level, interpreted, programming language that conforms to the ECMAScript specification. It is a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles.
+
 ## Table of Contents
 
 ## Main
+
+1. [Print](https://github.com/Cheatsheet-lang/JavaScript#print)
+2. [Variables](https://github.com/Cheatsheet-lang/JavaScript#variables)
+3. [Operations](https://github.com/Cheatsheet-lang/JavaScript#operations)
+4. [Arrays](https://github.com/Cheatsheet-lang/JavaScript#arrays)
+5. [Objects](https://github.com/Cheatsheet-lang/JavaScript#objects)
+6. [Conditional Statements](https://github.com/Cheatsheet-lang/JavaScript#conditions)
+7. [Loops](https://github.com/Cheatsheet-lang/JavaScript#loops)
+8. [Functions](https://github.com/Cheatsheet-lang/JavaScript#functions)
+9. [Prompts](https://github.com/Cheatsheet-lang/JavaScript#prompts)
 
 ## Print
 
