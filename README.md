@@ -384,7 +384,52 @@ They are generally used with JS's native functions like `map`, `filter`, `reduce
 These are the basics of asynchronous programming in JS. A promise is an object that may produce a single value some time in the future. Either a resolved value or a reason that it's not resolved.
 
 ```javascript
-var name = prompt("Enter your name");
+function asyncFunc() {
+    const output = fetch("result");
 
-console.log(name);
+    result.then(function(status) {
+        console.log("The Status of the output is " + status);
+    });
+}
 ```
+
+In the above function, the output variables are created later in time, and the result is not available immediately. So, we use promises to handle such cases.
+
+Promises can also be written in another way, Promise Object is created and then the `then` method is called on the object.
+
+See here, we are using an arrow function to create a promise.
+
+```javascript
+function asyncFunct() {
+    return new Promise((resolve, reject) => {
+        const output = fetch("result");
+
+        if (output) {
+            resolve("Success");
+        } else {
+            reject("Failure");
+        }
+    });
+}
+
+asyncFunct().then((status) => {
+        console.log("The status of the output is " + status);
+    });
+```
+
+## Async/Await
+
+Async and Await are the new way of writing the code asynchronously. It is the same as the promises, but the syntax is different. They have a concept which is called coroutines.
+
+Coroutine is a function, which will wait until the function is run, and return the control to the main loop, once the event occurred then the function will be resumed.
+
+The `await` is a special keyword that tells the JS to wait until the promise is returned. It can resolve or reject depending on the promise. And await keyword can only be used inside async function. `async` functions only return a promise, they don't return the actual value. To get the actual value, we need to `await` for the `async` function. The syntax for the `async` function is given below.
+
+```javascript
+async function asyncFunc() {
+    const output = await fetch("result");
+    return output;
+}
+```
+
+The `async` function implicitly returns a promise, so we can use the `then` method to get the value later.
