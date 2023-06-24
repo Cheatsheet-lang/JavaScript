@@ -309,6 +309,72 @@ if (result) {
 **Prompt**
 Displays a message to the user and also takes input from the user. It returns the input value to the user.
 
+## Callbacks
+
+Callbacks are JavaScript's way of implementing asynchronous programming. A callback is a function that is passed as an argument to another function and is executed after its parent function has been completed.
+
+javascript
+function callback() {
+    console.log("Callback function");
+}
+
+function parentFunction(callback) {
+    console.log("Parent function");
+    callback();
+}
+
+
+If the callback is an anonymous function, then we can also directly call the function at the time of parent call.
+
+javascript
+function parentFunction(callback) {
+    console.log("Parent function");
+    callback();
+}
+
+parentFunction(function() {
+    console.log("Callback function");
+});
+
+
+## Arrow functions
+
+These are a type of functions that are used to write the functions in a short way. They are anonymous functions, with a special syntax.
+
+It is named an arrow function, because of the arrow symbol `=>` in the syntax.
+
+javascript
+var functionName = (param1, param2, ...) => {
+    // function body
+    return value;
+}
+
+
+If the function has only one statement, then we can remove the curly braces and the return keyword.
+
+javascript
+var functionName = (param1, param2, ...) => statement;
+
+
+If the function has only one parameter, then we can remove the parenthesis.
+
+javascript
+var functionName = param1 => {
+    // function body
+    return value;
+}
+
+
+They are generally used with JS's native functions like `map`, `filter`, `reduce`, etc. When we need to apply the same operation to a set of values.
+
+## Promises
+
+These are the basics of asynchronous programming in JS. A promise is an object that may produce a single value some time in the future. Either a resolved value or a reason that it's not resolved.
+
+javascript
+
+
+
 ```javascript
 var name = prompt("Enter your name");
 
