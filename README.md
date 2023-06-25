@@ -584,3 +584,14 @@ person.names("Anurag", "Peddi");
 console.log(person.getFullName()); // Anurag Peddi
 console.log(person.same()); // Same
 ```
+
+## Destructing
+
+Destructing is a new way to extract values from objects and arrays. We can use this to extract the values from a deeper level.
+
+```javascript
+// Consider this object
+const person = {
+    
+}
+```
