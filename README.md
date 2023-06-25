@@ -433,3 +433,154 @@ async function asyncFunc() {
 ```
 
 The `async` function implicitly returns a promise, so we can use the `then` method to get the value later.
+
+## Classes
+
+Similar to languages like C++, Java, Python etc. JavaScript also supports classes. We use the keyword `new` to create an object of the class. The syntax of the class is given below.
+
+```javascript
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+
+    this.printDetails = function() {
+        console.log(this.name + " " + this.age);
+    }
+}
+
+var person = new Person("John", 20);
+person.printDetails();
+```
+
+There is also one more way to create a object, without using the `new` keyword. This is called the factory method.
+
+```javascript
+var person = {
+    name: "Anurag",
+    age: 20,
+    printDetails: function () {
+        console.log(this.name + " " + this.age);        
+    }
+}
+
+console.log(person.name);
+person.printDetails();
+```
+
+Both methods can be used to create an object, but the only difference is in the second method we directly create an object named person without creating a class.
+
+## Function Context
+
+All javascript functions run under a specific context/scope, for example, all the functions which are run in the browser are run under the `window` context. This keyword is used to access the context of the function.
+
+But we can change the context of the function using the `bind` method. The `bind` method returns a new function with the context changed.
+
+```javascript
+var person = {
+    name: "Anurag",
+}
+
+function printName() {
+    console.log(this.name);
+}
+
+// We cannot call the printName function directly, because the context of the function is not set.
+
+var printNameWithContext = printName.bind(person);
+```
+
+There is also another function, which is called `call` function. It is somewhat similar to `bind` but instead of returning the function, it directly calls the function with context.
+
+The same example can be written using the `call` function.
+
+```javascript
+printName.call(person);
+```
+
+In simple terms, you can think of call as the automatic execution of the bind function.
+
+```javascript
+printName.call(person)
+printName.bind(person)();
+```
+
+Both are same in terms of results. Another example:
+
+```javascript
+var printNameContext = printName.bind(person);
+var printNameCall = function () {
+    printName.call(person);
+}
+// both are same
+```
+
+## Inheritance
+
+An important concept of the object-oriented programming language is inheritance. JavaScript supports inheritance in many different ways. One of the ways is using the `prototype` property of the function.
+
+Every object in the javascript has a property called `prototype`
+
+### Prototypes
+
+Above under the classes section, you can see how to define a class without using any of the inheritance concepts. Now, let me give an example using the prototype property.
+
+```javascript
+function Person(firstName, lastName) {
+    this.firstname = firstName;
+    this.lastname = lastName;
+}
+
+Person.prototype.getFullName = function() {
+    return this.firstName + " " + this.lastName;
+}
+
+var person = new Person("Anurag", "Peddi");
+console.log(person.getFullName()); // Anurag Peddi
+```
+
+You can also define an empty class and then add the methods using prototypes.
+
+```javascript
+var Person = function() {}
+
+Person.prototype.names = function(firstm last) {
+    this.firstName = first;
+    this.lastName = last;
+}
+
+Person.prototype.getFullName = function() {
+    return this.firstName + " " + this.lastName;
+}
+
+var person = new Person();
+
+person.names("Anurag", "Peddi");
+console.log(person.getFullName()); // Anurag Peddi
+```
+
+Some inheritance examples:
+
+```javascript
+var Person = function() {}
+
+Person.prototype.names = function(first, last) {
+    this.firstName = first;
+    this.lastName = last;
+}
+
+Person.prototype.getFullName = function() {
+    return this.firstName + " " + this.lastName;
+}
+
+var anotherPerson = function() {};
+anotherPerson.prototype = new Person();
+
+anotherPerson.prototype.same = function() {
+    return "Same";
+}
+
+var person = new anotherPerson();
+person.names("Anurag", "Peddi");
+console.log(person.getFullName()); // Anurag Peddi
+console.log(person.same()); // Same
+```
