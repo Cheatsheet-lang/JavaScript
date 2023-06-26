@@ -591,7 +591,26 @@ Destructing is a new way to extract values from objects and arrays. We can use t
 
 ```javascript
 // Consider this object
-const person = {
-    
+var person = {
+    name: "Anurag",
+    age: 20,
+    address: {
+        city: "Hyderabad",
+        state: "Telangana",
+        country: "India"
+    }
 }
+
+// We can extract the values like this
+var { name, age } = person;
+console.log(name, age); // Anurag 20
+```
+
+This concept can also be used for arrays.
+
+```javascript
+var arr = [1, 2, 3, 4, 5];
+
+var [a, b, c, d, e] = arr;
+console.log(a, b, c, d, e); // 1 2 3 4 5
 ```
