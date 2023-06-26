@@ -65,6 +65,77 @@ const null_var = null;
 console.log(null_var); // prints null to the console
 ```
 
+### Strings
+
+Some of the default string functions and properties are:
+
+```javascript
+const str = "Hello World";
+console.log(str.length); // prints 11 to the console
+console.log(str.toUpperCase()); // prints HELLO WORLD to the console
+console.log(str.toLowerCase()); // prints hello world to the console
+```
+
+Individual characters in the strings can be accessed by knowing the index, using two methods square bracket notation and `.at()` method.
+
+One thing to note is that the index of the string starts from 0. One advantage of using `.at()` method is that we can use negative indices to access the characters from the end of the string.
+
+```javascript
+const str = "Hello World";
+console.log(str[0]); // prints H to the console
+console.log(str.at(0)); // prints H to the console
+console.log(str.at(-1)); // prints d to the console
+```
+
+Getting a part of the strings is one of the useful things in programming, which can be done by using the `.substring()` method.
+
+```javascript
+const str = "Hello World";
+console.log(str.substring(0, 5)); // prints Hello to the console
+console.log(str.substring(6)); // prints World to the console
+```
+
+The second argument is always optional, if you don't specify it, it will assume that the second argument is the length of the string.
+
+After this, another useful thing is to know about the template literals, which are used to print the variables in the strings. The template strings are enclosed within the backtick symbol "`".
+
+```javascript
+const name = "John";
+console.log(`Hello ${name}`); // prints Hello John to the console
+```
+
+### Numbers
+
+Numbers are one of the most important things in programming, and JS has a lot of functions and properties to deal with numbers.
+
+```javascript
+const num = 10000;
+
+console.log(num.toString()); // prints 10000 to the console
+```
+
+Large and Long numbers can be represented with `_` using the underscore notation, to avoid confusion in reading them.
+
+```javascript
+const num = 100_000_000;
+// is same as 100000000
+```
+
+When you want to convert a string into a number, you can use `parseInt()` method.
+
+```javascript
+const str = "100";
+console.log(Number.parseInt(str, 10)); // 100, the second argument is the base of the number
+```
+
+There is also one usage of the above function. When the string starts with a number and ends with a non-numeric character, still the `parseInt()` function will return the number.
+
+```javascript
+const str = "100px";
+console.log(Number.parseInt(str, 10)); // 100
+// It ignores the px at the end
+```
+
 Now, let's come to the most important part of dealing with variables, which is operations on them.
 
 ## Operations
