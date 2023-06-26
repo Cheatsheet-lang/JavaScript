@@ -15,6 +15,14 @@ JavaScript is a high-level, interpreted, programming language that conforms to t
 7. [Loops](https://github.com/Cheatsheet-lang/JavaScript#loops)
 8. [Functions](https://github.com/Cheatsheet-lang/JavaScript#functions)
 9. [Prompts](https://github.com/Cheatsheet-lang/JavaScript#prompts)
+10. [Callbacks](https://github.com/Cheatsheet-lang/JavaScript#callbacks)
+11. [Arrow Functions](https://github.com/Cheatsheet-lang/JavaScript#arrow-functions)
+12. [Promises](https://github.com/Cheatsheet-lang/JavaScript#promises)
+13. [Async/Await](https://github.com/Cheatsheet-lang/JavaScript#asyncawait)
+14. [Classes](https://github.com/Cheatsheet-lang/JavaScript#classes)
+15. [Function Context](https://github.com/Cheatsheet-lang/JavaScript#function-context)
+16. [Inheritance](https://github.com/Cheatsheet-lang/JavaScript#inheritance)
+17. [Destructing](https://github.com/Cheatsheet-lang/Javascript#destructing)
 
 ## Print
 
@@ -240,7 +248,7 @@ switch (a) {
 
 ## Loops
 
-Loops are used to perform a set of operations multiple times. There are three types of loops in JS. The syntax of loops is similar to other compile time programming languages.
+Loops are used to perform a set of operations multiple times. There are three types of loops in JS. The syntax of loops is similar to other compile-time programming languages.
 
 **For Loop**
 ```javascript
