@@ -65,6 +65,18 @@ const null_var = null;
 console.log(null_var); // prints null to the console
 ```
 
+There are two ways to declare a variable in JS, one is `const` and the other is `let`. The difference between them is that the `const` variables cannot be reassigned, but the `let` variables can be reassigned.
+
+```javascript
+const const_var = 10;
+let let_var = 10;
+
+const_var = 20; // throws an error in the JavaScript
+let_var = 20; // works fine
+```
+
+For the const datatype, if you have assigned an array or an object, you can change the values of the array or the object, you can add additional elements and many more, but you cannot reassign the variable.
+
 ### Strings
 
 Some of the default string functions and properties are:
@@ -150,7 +162,7 @@ const b = 20;
 console.log(a + b); // prints 30 to the console
 ```
 
-We can also perform addition on strings, which is called as concatenation.
+We can also perform addition on strings, which is called concatenation.
 
 ```javascript
 const a = "Hello";
@@ -192,9 +204,9 @@ console.log(Math.round(10.5)); // prints 11 to the console
 
 ## Arrays
 
-Arrays are a type of datatypes(advanced), which can be store any kind of datatype of in it. Arrays are mutable, meaning the content of the array can be changed at any point in time.
+Arrays are a type of datatype(advanced), which can store any kind of datatype in it. Arrays are mutable, meaning the content of the array can be changed at any point in time.
 
-They are defined by the square bracket notation and also as a object notation. One of the advantage of the array datatype is, if you know the location(index) of the element, then you can access it by constant-time operation.
+They are defined by the square bracket notation and also as an object notation. One of the advantages of the array datatype is, if you know the location(index) of the element, then you can access it by constant-time operation.
 
 **Defining an Array**
 ```javascript
@@ -228,6 +240,8 @@ arr.pop();
 console.log(arr); // prints [1, 2, 3, 4] to the console
 ```
 
+When running a push operation, it will return the length of the array.
+
 **Queue Operations**
 ```javascript
 var arr = [1, 2, 3, 4, 5];
@@ -242,6 +256,16 @@ var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var slice = arr.slice(2, 5); // slice(start_index, count)
 console.log(slice); // prints [3, 4, 5, 6, 7] to the console
 console.log(arr); // prints [1, 2, 8, 9]
+```
+
+To apply a specific operation on each element of the array, we can use the `forEach()` method.
+
+```javascript
+var arr = [1, 2, 3, 4, 5];
+
+arr.forEach((element) => {
+    console.log(element);
+});
 ```
 
 ## Conditions
