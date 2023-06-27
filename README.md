@@ -184,7 +184,7 @@ console.log(a % b); // prints 10 to the console
 There is also a shorthand notation of the operations, which is used to perform operations on the same variable.
 
 ```javascript
-var a = 10;
+let a = 10;
 a += 10; // a = a + 10
 console.log(a); // prints 20 to the console
 // Similarly, there are other operations like -=, *=, /=, %=
@@ -226,13 +226,13 @@ arr[2] = 10;
 console.log(arr); // prints [undefined, undefined, 10] to the console
 ```
 
-If a empty array is defined, then the array is filled with `undefined` values.
+If an empty array is defined, then the array is filled with `undefined` values.
 
 This datatype also has some special properties, we can also apply stack and queue operations on it.
 
 **Stack Operations**
 ```javascript
-var arr = [1, 2, 3, 4, 5];
+let arr = [1, 2, 3, 4, 5];
 arr.push(6); // push operation
 console.log(arr); // prints [1, 2, 3, 4, 5, 6] to the console
 arr.pop(); // pop operation
@@ -244,7 +244,7 @@ When running a push operation, it will return the length of the array.
 
 **Queue Operations**
 ```javascript
-var arr = [1, 2, 3, 4, 5];
+let arr = [1, 2, 3, 4, 5];
 console.log(arr.shift()); // dequeue operation (prints 1 to the console)
 arr.unshift(6); // enqueue operation(to the first index)
 console.log(arr); // prints [6, 2, 3, 4, 5] to the console
@@ -252,8 +252,8 @@ console.log(arr); // prints [6, 2, 3, 4, 5] to the console
 
 **Slicing an Array**
 ```javascript
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-var slice = arr.slice(2, 5); // slice(start_index, count)
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let slice = arr.slice(2, 5); // slice(start_index, count)
 console.log(slice); // prints [3, 4, 5, 6, 7] to the console
 console.log(arr); // prints [1, 2, 8, 9]
 ```
@@ -261,12 +261,40 @@ console.log(arr); // prints [1, 2, 8, 9]
 To apply a specific operation on each element of the array, we can use the `forEach()` method.
 
 ```javascript
-var arr = [1, 2, 3, 4, 5];
+let arr = [1, 2, 3, 4, 5];
 
 arr.forEach((element) => {
     console.log(element);
 });
 ```
+
+Filtering on the array can be done, using the `filter()` method. It will return a new array, which contains the elements which satisfy the condition.
+
+```javascript
+let arr = [11, 25, 13, 42, 54, 6, 78];
+
+let filtered = arr.filter((element) => {
+    return element > 25;
+});
+console.log(filtered); // prints [42, 54, 78] to the console
+// Here you can see that only elements greater than 25 are returned
+```
+
+The next method, which we are going to learn is the find method. It will return the first element which satisfies the condition. If no element is matched then, it will return `undefined`.
+
+```javascript
+let arr = [11, 25, 13, 42, 54, 6, 78];
+
+let filtered = arr.find((element) => {
+    return element > 25;
+});
+console.log(filtered); // prints 42 to the console
+```
+
+The main, difference between the `filter()` and `find`() methods is the return datatype of the methods, `filter()` returns an array, whereas `find()` returns the element.
+
+* Filter will always return an array, even if there is only one element or no element in the array.
+* Find will return the element, if there is only one element in the array, otherwise it will return undefined.
 
 ## Conditions
 
