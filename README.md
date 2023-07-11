@@ -296,6 +296,137 @@ The main, difference between the `filter()` and `find`() methods is the return d
 * Filter will always return an array, even if there is only one element or no element in the array.
 * Find will return the element, if there is only one element in the array, otherwise it will return undefined.
 
+To apply an operation on the array, we can use the `map()` method. It will return a new array, which contains the result of the operation.
+
+```javascript
+let arr = [1, 2, 3, 4, 5];
+
+let mapped = arr.map((element) => {
+    return element * 2;
+});
+console.log(mapped); // prints [2, 4, 6, 8, 10] to the console
+//doubles each and every element of the array
+```
+
+To check the presence of an element in the array, we use the `includes()` method. It will return a boolean value, based on the presence of the element.
+
+```javascript
+let arr = ["Anurag", "Peddi", "Anuhya", "Chinnu"];
+
+console.log(arr.includes("Anurag")); // prints true to the console
+console.log(arr.includes("Anu")); // prints false to the console
+```
+
+To merge, all the elements of the array, with a comma separating them, we can use the `.toString()` method.
+
+```javascript
+let arr = ["Anurag", "Peddi", "Anuhya", "Chinnu"];
+
+console.log(arr.toString()); // prints Anurag,Peddi,Anuhya,Chinnu to the console
+```
+
+If you have a different delimiter other than comma, then you can use the `.join()` method.
+
+```javascript
+let arr = ["Anurag", "Peddi", "Anuhya", "Chinnu"];
+
+console.log(arr.join("$")); // prints Anurag$Peddi$Anuhya$Chinnu to the console
+```
+
+## Objects
+
+The JavaScript also has the properties of the object-oriented programming language. The objects are defined using the curly braces.
+
+```javascript
+let obj = {} // empty object
+let person = {
+    firstName: "Anurag",
+    lastName: "Peddi"
+}
+```
+
+You can access the members of the object using the dot operator.
+
+```javascript
+let person = {
+    firstName: "Anurag",
+    lastName: "Peddi"
+}
+
+console.log(person.firstName); // prints Anurag to the console
+```
+
+One another way to access the members of the object is using the square brackets.
+
+```javascript
+let person = {
+    firstName: "Anurag",
+    lastName: "Peddi"
+}
+
+console.log(person["firstName"]); // prints Anurag to the console
+```
+
+The main difference between the dot operator and the square brackets is that, the dot operator will not work if the property name contains the special characters, whereas the square brackets will work.
+
+### Iteration
+
+You can iterate over the object using the `for-in` loop.
+
+```javascript
+let person = {
+    firstName: "Anurag",
+    lastName: "Peddi"
+    job: "Student",
+    age: 24,
+    country: "India"
+}
+
+for (var mem in person) {
+    console.log("Value of " + mem + " is " + person[mem]);
+}
+
+// prints
+// Value of firstName is Anurag
+// Value of lastName is Peddi
+// Value of job is Student
+// Value of age is 24
+// Value of country is India
+```
+
+### Conversions
+
+The objects can be converted to the string using the `JSON.stringify()` method.
+
+```javascript
+let person = {
+    firstName: "Anurag",
+    lastName: "Peddi"
+    job: "Student",
+    age: 24,
+    country: "India"
+}
+
+console.log(JSON.stringify(person));
+// prints {"firstName":"Anurag","lastName":"Peddi","job":"Student","age":24,"country":"India"} to the console
+```
+
+The keys and values of the object can be converted into the array using the `Object.keys()` and `Object.values()` methods.
+
+```javascript
+let person = {
+    firstName: "Anurag",
+    lastName: "Peddi"
+    job: "Student",
+    age: 24,
+    country: "India"
+}
+
+console.log(Object.keys(person)); // prints ["firstName", "lastName", "job", "age", "country"] to the console
+console.log(Object.values(person)); // prints ["Anurag", "Peddi", "Student", 24, "India"] to the console
+console.log(Object.entries(person)); // prints [["firstName", "Anurag"], ["lastName", "Peddi"], ["job", "Student"], ["age", 24], ["country", "India"]] to the console
+```
+
 ## Conditions
 
 Conditions are used to check whether a condition is true or false, and based on that we can perform some operations.

@@ -1,3 +1,5 @@
+// @ts-check
+
 const integer = 10; // Integer variable
 const string = "Hello World"; // String variable
 const float = 10.5; // Float variable
